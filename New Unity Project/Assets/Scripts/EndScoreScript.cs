@@ -12,16 +12,16 @@ public class EndScoreScript : MonoBehaviour {
     
 
     void Start () {
-        player2total = goalscript.player2total;
-        player1total = goalscript.player1total;
+        
        
     }
 	
 	// Update is called once per frame
 	void Update () {
-       
 
-		if (player2total < player1total)
+        player2total = goalscript.player2total;
+        player1total = goalscript.player1total;
+        if (player2total < player1total)
         {
             text.text = "player 1 Wins";
         }

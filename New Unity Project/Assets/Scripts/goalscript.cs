@@ -31,18 +31,21 @@ public class goalscript : MonoBehaviour {
             if (scene == "game")
         {
             playerscore++;
+
+            if (this.gameObject.name == "Player1Score")
+            {
+                player1total = player1total + 1;
+
+            }
+            else if (this.gameObject.name == "Player2Score")
+            {
+                player2total = player2total + 1;
+            }
+
             if (playerscore >= max)
             {
             
-                if (this.gameObject.name == "Player1Score")
-                {
-                   player1total = player1total + 1;
-                    
-                }
-                else if (this.gameObject.name == "Player2Score")
-                {
-                    player2total = player2total + 1;
-                }
+                
             
                 GameObject.FindGameObjectWithTag("player2score").GetComponent<goalscript>().playerscore = 0;
                 GameObject.FindGameObjectWithTag("player1score").GetComponent<goalscript>().playerscore = 0;
@@ -58,18 +61,19 @@ public class goalscript : MonoBehaviour {
             playerscore++;
             playerscore++;
             playerscore++;
+            if (this.gameObject.name == "Player1Score")
+            {
+                player1total = player1total + 3;
+
+            }
+            else if (this.gameObject.name == "Player2Score")
+            {
+                player2total = player2total + 3;
+            }
             if (playerscore >= max)
             {
 
-                if (this.gameObject.name == "Player1Score")
-                {
-                    player1total = player1total + 3;
-
-                }
-                else if (this.gameObject.name == "Player2Score")
-                {
-                    player2total = player2total + 3;
-                }
+               
 
                 GameObject.FindGameObjectWithTag("player2score").GetComponent<goalscript>().playerscore = 0;
                 GameObject.FindGameObjectWithTag("player1score").GetComponent<goalscript>().playerscore = 0;
